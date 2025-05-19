@@ -1,11 +1,17 @@
-import { addTodo, getTodos, toggleTodo, removeTodo } from './todo.js';
+import { addTodo } from './todo.js';
+import { renderTodos } from './ui.js';
 
-addTodo('Learn Vite!');
-addTodo('Write ToDo logic');
-console.log('All todos:', getTodos());
+const form = document.getElementById('todo-form');
+const input = document.getElementById('todo-input');
 
-toggleTodo(getTodos()[0].id);
-console.log('After toggle:', getTodos());
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const text = input.value.trim();
+  if (text !== '') {
+    addTodo(text);
+    input.value = '';
+    renderTodos();
+  }
+});
 
-removeTodo(getTodos()[0].id);
-console.log('After removal:', getTodos());
+renderTodos(); // FONTOS: ez frissíti az UI-t induláskor!

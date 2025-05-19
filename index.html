@@ -1,11 +1,39 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Clean ToDo Vite</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 600px;
+        margin: 2rem auto;
+        padding: 1rem;
+      }
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+      li {
+        margin: 0.5rem 0;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
-    <div id="app"></div>
+    <h1>Clean ToDo</h1>
+
+    <form id="todo-form">
+      <input
+        type="text"
+        id="todo-input"
+        placeholder="What needs to be done?"
+      />
+      <button type="submit">Add</button>
+    </form>
+
+    <ul id="todo-list"></ul>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
