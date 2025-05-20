@@ -12,24 +12,24 @@ This project showcases a clean development environment with ESLint, Prettier, lo
 - ✅ Modular JS structure (import/export)
 - ✅ ESLint + Prettier for code quality
 - ✅ Built using Vite for blazing fast development
-- 📝 Written entirely in English
+- ✅ Hosted on GitHub Pages via GitHub Actions
+
 
 ---
 
 ## 📸 Screenshot
 
-> *(Add one later using GitHub's "drag-and-drop image" in edit mode)*
 
----
 
 ## 📦 Tech Stack
 
 - JavaScript (ES Modules)
 - Vite
-- HTML/CSS
-- ESLint + Airbnb Style Guide
+- ESLint (Airbnb style)
 - Prettier
 - localStorage API
+- GitHub Actions
+- GitHub Pages
 
 ---
 
@@ -37,19 +37,21 @@ This project showcases a clean development environment with ESLint, Prettier, lo
 
 clean-todo-vite/
 ├── index.html
-├── .prettierrc
+├── vite.config.js
 ├── .eslintrc.json
+├── .prettierrc
 ├── src/
-│ ├── main.js # Entry point
-│ ├── todo.js # Core logic
-│ ├── ui.js # DOM rendering
-│ └── storage.js # localStorage integration
-
+│ ├── main.js
+│ ├── todo.js
+│ ├── ui.js
+│ ├── storage.js
+│ └── style.css
 ---
 
-## 📍 Live Demo
 
-🔗 _Coming soon via GitHub Pages_
+## 🔗 Live Demo
+
+👉 [Click to open on GitHub Pages](https://tjtamas.github.io/clean-todo-vite/)
 
 ---
 
