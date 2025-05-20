@@ -2,19 +2,23 @@ import { getTodos, toggleTodo, removeTodo } from './todo.js';
 
 export function renderTodos() {
   const list = document.getElementById('todo-list');
-  list.innerHTML = ''; // előző lista törlése
+  list.innerHTML = '';
 
   const todos = getTodos();
 
   todos.forEach((todo) => {
     const li = document.createElement('li');
     li.textContent = todo.text;
-    li.style.textDecoration = todo.done ? 'line-through' : 'none';
+
+    // Stílusos pipálás class alapján
+    if (todo.done) {
+      li.classList.add('done');
+    }
 
     // toggle kattintásra
     li.addEventListener('click', () => {
       toggleTodo(todo.id);
-      renderTodos(); // újrarajzolás
+      renderTodos();
     });
 
     // delete gomb
@@ -22,7 +26,7 @@ export function renderTodos() {
     deleteBtn.textContent = '❌';
     deleteBtn.style.marginLeft = '10px';
     deleteBtn.addEventListener('click', (e) => {
-      e.stopPropagation(); // ne toggle-öljön is
+      e.stopPropagation();
       removeTodo(todo.id);
       renderTodos();
     });

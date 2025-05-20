@@ -1,3 +1,4 @@
+import './style.css';
 import { addTodo } from './todo.js';
 import { renderTodos } from './ui.js';
 
