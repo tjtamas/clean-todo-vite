@@ -1,7 +1,7 @@
 {
   "name": "clean-todo-vite",
   "private": true,
-  "homepage": "https://tjtamas.github.io/clean-todo-vite/",
+ "homepage": "https://tjtamas.github.io/clean-todo-vite/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
